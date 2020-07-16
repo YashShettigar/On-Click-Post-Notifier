@@ -1,0 +1,36 @@
+{
+  "name": "food_order_app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.11.0",
+    "axios": "^0.19.2",
+    "react": "16.8.1",
+    "react-native": "0.61.0",
+    "react-native-firebase": "^5.6.0",
+    "react-native-paper": "^3.10.1",
+    "react-native-push-notification": "^4.0.0",
+    "react-native-vector-icons": "^7.0.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/runtime": "^7.5.0",
+    "@react-native-community/eslint-config": "^0.0.3",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "metro-react-native-babel-preset": "^0.51.1",
+    "react-test-renderer": "16.8.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
