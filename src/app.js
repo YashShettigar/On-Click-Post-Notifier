@@ -4,6 +4,11 @@ import { Button } from 'react-native-paper'
 import { connect } from 'react-redux'
 import { toggleNotification } from './reducers'
 import { changeNotificationStatus } from './backend'
+import messaging from '@react-native-firebase/messaging'
+
+async function registerAppWithFCM() {
+  await messaging().registerDeviceForRemoteMessages();
+}
 
 const MainApp = (props) => {
 
@@ -19,7 +24,7 @@ const MainApp = (props) => {
             [props.notification ? styles.notifyEnBtn : styles.notifyDsBtn,
             { width:270, height:50, borderRadius:25, justifyContent:'center' }]
           }
-          onPress={() => props.dispatch(toggleNotification()) & changeNotificationStatus()}
+          onPress={() => props.dispatch(toggleNotification()) & changeNotificationStatus() & registerAppWithFCM()}
         >
           {
             props.notification ? "Enable Notifications" : "Disable Notifications"

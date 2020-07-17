@@ -13,11 +13,3 @@ const persistedReducer = persistReducer(notifyConfig, reducers)
 
 export const store = createStore(persistedReducer)
 export const persistor = persistStore(store)
-
-
-// export const changeNotificationState = (status) => {
-//     return {
-//         type: 'NOTIFY',
-//         status
-//     }
-// }
